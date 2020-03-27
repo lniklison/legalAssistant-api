@@ -1,5 +1,5 @@
-let Sequelize = require('sequelize');
-let sql = require('../config/sql');
+const Sequelize = require('sequelize');
+const sql = require('../config/sql');
 
 const DocumentType = sql.define('DocumentTypes', {
   name: Sequelize.STRING,

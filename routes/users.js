@@ -1,7 +1,7 @@
-let express = require('express');
-let router = express.Router();
-let User = require('../models/User');
-let { check, validationResult } = require('express-validator');
+const express = require('express');
+const router = express.Router();
+const User = require('../models/User');
+const { check, validationResult } = require('express-validator');
 
 /* GET all users listing. */
 router.get('/', async (req, res) => {
@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
 /* GET get user by id. */
 router.get('/:id', async (req, res) => {
     let user = await User.findById(req.params.id);
+
     return res.send(user);
 });
 
